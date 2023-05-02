@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="scss/style.css" />
+    <title>Chromacard</title>
+  </head>
+  <header class="header">
+    <div class="header__wrapper">
+      <div class="header__wrapper__brand">
+        <img
+          src="/images/LOGO.svg"
+          alt=""
+          class="header__wrapper__brand__logo"
+        />
+        <h2 class="header__wrapper__brand__name">Chromacard</h2>
+      </div>
+      <div class="header__wrapper__btns">
+        <svg
+          viewBox="0 0 24 24"
+          xmlns="http://www.w3.org/2000/svg"
+          width="24"
+          height="24"
+          fill="none"
+          style="margin-top: 7px"
+          onclick="backhome()"
+        >
+          <style>
+            @keyframes slide-4 {
+              to {
+                transform: translateX(2px);
+              }
+            }
+            .prefix__slide-4 {
+              animation: slide-4 1s infinite alternate both
+                cubic-bezier(1, -0.01, 0, 0.98);
+            }
+          </style>
+          <g class="prefix__slide-4">
+            <path
+              class="prefix__slide-4"
+              fill="white"
+              fill-rule="evenodd"
+              d="M11.891 7.166a.714.714 0 00-1.006.091l-3.564 4.277a.71.71 0
+            00-.102.777.71.71 0 00.102.155l3.564 4.277a.714.714 0
+            001.098-.915L9.417 12.75h7.731a.75.75 0
+            100-1.5h-7.73l2.565-3.078a.714.714 0 00-.092-1.006z"
+              clip-rule="evenodd"
+            />
+          </g>
+        </svg>
+      </div>
+    </div>
+  </header>
+  <body>
+    <main class="main">
+      <div id="home">
+        <div class="main__wrapper">
+          <div class="main__wrapper__intro">
+            <h2 class="main__wrapper__intro__brandname">Chromacard</h2>
+            <p class="main__wrapper__intro__description">
+              AI Based
+              <br />
+              Random Color Business Card Generator
+            </p>
+            <button class="main__wrapper__intro__startbtn" onclick="launch()">
+              Generate
+              <svg
+                viewBox="0 0 24 24"
+                xmlns="http://www.w3.org/2000/svg"
+                width="22"
+                height="22"
+                fill="none"
+                style="margin-top: 1px"
+              >
+                <style>
+                  @keyframes wow {
+                    0%,
+                    to {
+                      transform: translate(0, 0) scaleX(0.8) scaleY(0.8);
+                    }
+                    50% {
+                      transform: translate(0, -1px) scaleX(1.1) scaleY(1.1);
+                    }
+                  }
+                </style>
+                <circle
+                  cx="12.602"
+                  cy="12"
+                  r="7"
+                  stroke="white"
+                  stroke-width="1.5"
+                />
+                <g
+                  style="
+                    animation: wow cubic-bezier(1, -0.1, 0, 1.04) 3s infinite;
+                    transform-origin: 50% 50%;
+                  "
+                >
+                  <circle cx="9.602" cy="10.277" r="1" fill="white" />
+                  <circle cx="15.602" cy="10.277" r="1" fill="white" />
+                  <ellipse
+                    cx="12.602"
+                    cy="14.5"
+                    stroke="white"
+                    rx="2"
+                    ry="2.5"
+                  />
+                </g>
+              </svg>
+            </button>
+          </div>
+          <div class="main__wrapper__logowrapper">
+            <img
+              src="/images/LOGO.svg"
+              alt=""
+              class="main__wrapper__logowrapper__logo"
+            />
+          </div>
+        </div>
+      </div>
+
+      <div id="onboarding" style="display: none">
+        <div class="onboardingwrapper">
+          <div class="onboardingwrapper__styleone">
+            <img class="imgcard" src="/images/Business card.svg" alt="" />
+            <div class="onboardingwrapper__styleone__dis">
+              <h6 class="onboardingwrapper__styleone__dis__txt">Style one</h6>
+              <button class="onboardingwrapper__styleone__dis__btn">
+                Choose
+              </button>
+            </div>
+          </div>
+          <div class="onboardingwrapper__styletwo">
+            <img
+              class="imgcard"
+              src="/images/Businesscardstyletwo.svg"
+              alt=""
+            />
+            <div class="onboardingwrapper__styletwo__dis">
+              <h6 class="onboardingwrapper__styleone__dis__txt">Style two</h6>
+              <button class="onboardingwrapper__styleone__dis__btn">
+                Choose
+              </button>
+            </div>
+          </div>
+          <div class="onboardingwrapper__stylethree">
+            <img
+              class="imgcard"
+              src="/images/businesscardstylethree.svg"
+              alt=""
+            />
+            <div class="onboardingwrapper__styleone__dis">
+              <h6 class="onboardingwrapper__stylethree__dis__txt">
+                Style three
+              </h6>
+              <button class="onboardingwrapper__styleone__dis__btn">
+                Choose
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </main>
+    <script src="js/script.js"></script>
+  </body>
+</html>

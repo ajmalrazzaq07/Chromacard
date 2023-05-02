@@ -1,0 +1,56 @@
+@use "fonts" as *;
+@use "breakpoints" as *;
+.main {
+  padding: 15px;
+  flex-direction: column;
+  display: flex;
+  justify-content: center;
+  min-height: 80vh;
+  overflow: hidden;
+  &__wrapper {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    gap: 30px;
+    @include breakpoint(900px) {
+      flex-direction: column-reverse;
+    }
+    &__intro {
+      display: flex;
+      flex-direction: column;
+      &__brandname {
+        font-family: $font-penta;
+        color: #4d4d4d;
+      }
+      &__description {
+        color: var(--color-tetra);
+
+        font-family: $font-secondary;
+      }
+      &__startbtn {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        background: var(--color-penta);
+        outline: none;
+        width: 130px;
+        height: 40px;
+        padding: 10px;
+        border: none;
+        color: var(--color-tetra);
+        font-family: $font-secondary;
+        border-radius: 100px;
+        margin-top: 20px;
+        font-size: 16px;
+      }
+    }
+    &__logowrapper {
+      width: 300px;
+      &__logo {
+        width: 100%;
+        position: relative;
+      }
+    }
+  }
+}

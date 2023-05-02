@@ -1,0 +1,361 @@
+@import url("https://fonts.googleapis.com/css2?family=Noto+Sans+Mono&family=Poppins&display=swap");
+/* Set box-sizing globally to handle padding and border widths */
+@import url("https://rsms.me/inter/inter.css");
+*,
+*::after,
+*::before {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+@font-face {
+  font-family: Inter var;
+  src: url("/fonts/inter-roman-latin.2ed14f66.woff2") format("woff2");
+  font-style: normal;
+  font-weight: 100 900;
+  font-display: swap;
+  unicode-range: U+0-FF, U+131, U+152-153, U+2BB-2BC, U+2C6, U+2DA, U+2DC, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+}
+@font-face {
+  font-family: "Rza";
+  src: url("https://www.upwork.com/static/fonts-global/4.0.1/rza-regular.woff2") format("woff2");
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+}
+@font-face {
+  font-family: "Product Sans";
+  src: local("Open Sans"), local("OpenSans"), url("https://fonts.gstatic.com/s/productsans/v5/HYvgU2fE2nRJvZ5JFAumwegdm0LZdjqr5-oayXSOefg.woff2") format("woff2");
+  font-style: normal;
+}
+@font-face {
+  font-family: "Lemon Milk";
+  src: url("/fonts/LEMONMILK-Medium.woff2") format("woff2");
+  font-style: normal;
+  font-weight: 800;
+  font-display: swap;
+  unicode-range: U+0-FF, U+131, U+152-153, U+2BB-2BC, U+2C6, U+2DA, U+2DC, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+}
+@font-face {
+  font-family: "DM Sans";
+  src: url("/fonts/DM_Sans-500-latin4.82c42c7.woff2") format("woff2");
+  font-style: normal;
+  font-weight: 500;
+  font-display: swap;
+  unicode-range: U+0-FF, U+131, U+152-153, U+2BB-2BC, U+2C6, U+2DA, U+2DC, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+}
+:root {
+  --color-primary: #1e1e20;
+  --color-secondary: #252529;
+  --color-tertiary: #161618;
+  --color-tetra: #dfdfd7;
+  --color-penta: #8739f9;
+  --color-gradient: linear-gradient(
+    140deg,
+    rgba(78, 86, 163, 1) 0%,
+    rgba(244, 246, 248, 1) 90%
+  );
+}
+
+.header {
+  background-color: var(--color-primary);
+  padding: 15px;
+  border-bottom: 1px solid var(--color-secondary);
+  position: sticky;
+  top: 0;
+}
+.header__wrapper {
+  padding: 0px 20px;
+  display: flex;
+  justify-content: space-between;
+}
+.header__wrapper__brand {
+  display: flex;
+}
+.header__wrapper__brand__logo {
+  width: 3em;
+  height: auto;
+}
+.header__wrapper__brand__name {
+  margin: 4px;
+  color: var(--color-tetra);
+  font-family: Product Sans;
+  font-weight: 400;
+  font-size: 1.5em;
+}
+
+.main {
+  padding: 15px;
+  flex-direction: column;
+  display: flex;
+  justify-content: center;
+  min-height: 80vh;
+  overflow: hidden;
+}
+.main__wrapper {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  gap: 30px;
+}
+@media (max-width: 900px) {
+  .main__wrapper {
+    flex-direction: column-reverse;
+  }
+}
+.main__wrapper__intro {
+  display: flex;
+  flex-direction: column;
+}
+.main__wrapper__intro__brandname {
+  font-family: "Lemon Milk";
+  color: #4d4d4d;
+}
+.main__wrapper__intro__description {
+  color: var(--color-tetra);
+  font-family: Product Sans;
+}
+.main__wrapper__intro__startbtn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: var(--color-penta);
+  outline: none;
+  width: 130px;
+  height: 40px;
+  padding: 10px;
+  border: none;
+  color: var(--color-tetra);
+  font-family: Product Sans;
+  border-radius: 100px;
+  margin-top: 20px;
+  font-size: 16px;
+}
+.main__wrapper__logowrapper {
+  width: 300px;
+}
+.main__wrapper__logowrapper__logo {
+  width: 100%;
+  position: relative;
+}
+
+.imgcard {
+  width: 12em;
+}
+
+.onboardingwrapper {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  flex-wrap: wrap;
+  align-items: center;
+  overflow: hidden;
+  width: 100%;
+  gap: 30px;
+  height: 100%;
+}
+.onboardingwrapper__styleone, .onboardingwrapper__stylethree, .onboardingwrapper__styletwo {
+  background-color: var(--color-tertiary);
+  width: 400px;
+  height: 200px;
+  display: flex;
+  flex-direction: row;
+  border-radius: 16px;
+  padding: 10px;
+  align-items: center;
+  justify-content: space-around;
+}
+.onboardingwrapper__styleone__dis, .onboardingwrapper__stylethree__dis, .onboardingwrapper__styletwo__dis {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.onboardingwrapper__styleone__dis__txt, .onboardingwrapper__stylethree__dis__txt, .onboardingwrapper__styletwo__dis__txt {
+  color: var(--color-tetra);
+  font-family: Product Sans;
+  font-weight: 999;
+  text-align: center;
+  text-transform: uppercase;
+}
+.onboardingwrapper__styleone__dis__btn, .onboardingwrapper__stylethree__dis__btn, .onboardingwrapper__styletwo__dis__btn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: var(--color-penta);
+  outline: none;
+  width: 100px;
+  height: 35px;
+  padding: 10px;
+  border: none;
+  color: var(--color-tetra);
+  font-family: Product Sans;
+  border-radius: 100px;
+  margin-top: 20px;
+  font-size: 14px;
+}
+*,
+*:after,
+*:before {
+  box-sizing: border-box;
+}
+
+/* Import of the Inter Font*/
+/* Base */
+:root {
+  --font-size: calc(18px + 0.698vw); /* The character count on */
+  --line-height: calc(var(--font-size) * 1.4);
+  --letter-spacing: calc(var(--font-size) * 0.0015);
+  --font-weight: 300;
+  --red: #eb5757;
+  --blue: #0004b3;
+  --light-blue: #b3d7ff; /* The color is the native browser highlight text color, to make the appeal of importance and focus on specific areas of the text.*/
+  --dark-gray: #282c35;
+  --light-gray: #f7f7f7;
+  --font-family: "Inter", sans-serif;
+}
+
+html,
+body {
+  font-family: var(--font-family);
+  word-break: break-word;
+  scroll-behavior: smooth;
+  font-variant-numeric: slashed-zero;
+}
+
+p,
+li,
+b,
+i,
+strong,
+a,
+mark {
+  font-size: var(--font-size);
+  line-height: var(--line-height);
+  letter-spacing: var(--letter-spacing);
+  font-feature-settings: normal;
+  font-family: var(--font-family);
+}
+
+p,
+li,
+mark,
+a,
+blockquote {
+  font-weight: calc(var(--font-weight) * 1.33);
+}
+
+code {
+  font-size: calc(var(--font-size) * 1.1);
+  line-height: var(--line-height);
+  letter-spacing: var(--letter-spacing);
+  font-weight: calc(var(--font-weight) * 1.33);
+  color: var(--red);
+  font-family: var(--font-family);
+}
+
+mark {
+  background: var(--light-blue);
+  padding: 0.05vw 0.4vw;
+  border-radius: 2px;
+  color: var(--dark-gray);
+  font-size: calc(var(--font-size) * 1.1);
+  letter-spacing: var(--letter-spacing);
+  font-weight: calc(var(--font-weight) * 1.33);
+  word-break: break-word;
+  font-family: var(--font-family);
+}
+
+blockquote {
+  background-color: var(--light-gray);
+  font-size: calc(var(--font-size) * 1.1);
+  letter-spacing: var(--letter-spacing);
+  border-left: 4px solid var(--dark-gray);
+  border-radius: 2px;
+  padding: 2.5vw;
+  margin: 2%;
+  font-style: italic;
+  font-family: var(--font-family);
+}
+
+a {
+  color: var(--dark-gray);
+  -webkit-text-decoration-skip-ink: none;
+          text-decoration-skip-ink: none;
+  font-family: var(--font-family);
+}
+
+a:focus {
+  outline: 1px dashed var(--blue);
+}
+
+a:hover {
+  color: var(--blue);
+}
+
+pre {
+  background-color: var(--dark-gray);
+  color: var(--light-gray);
+  display: block;
+  margin: 0 0 1.5625em;
+  border-radius: 4px;
+  overflow: auto;
+  padding: 2.5vw;
+  tab-size: 4;
+  -moz-tab-size: 4;
+  -o-tab-size: 4;
+  white-space: pre-wrap;
+  word-break: break-all;
+  font-size: calc(var(--font-size) * 1.1);
+  letter-spacing: var(--letter-spacing);
+  font-family: var(--font-family);
+}
+
+h1 {
+  font-size: calc(var(--font-size) * 2.3);
+  letter-spacing: var(--letter-spacing);
+  font-weight: calc(var(--font-weight) * 2.66);
+  font-family: var(--font-family);
+}
+
+h2 {
+  font-size: calc(var(--font-size) * 2);
+  letter-spacing: var(--letter-spacing);
+  font-weight: calc(var(--font-weight) * 2.33);
+  font-family: var(--font-family);
+}
+
+h3 {
+  font-size: calc(var(--font-size) * 1.75);
+  letter-spacing: var(--letter-spacing);
+  font-weight: calc(var(--font-weight) * 2);
+  font-family: var(--font-family);
+}
+
+h4 {
+  font-size: calc(var(--font-size) * 1.5);
+  letter-spacing: var(--letter-spacing);
+  font-weight: calc(var(--font-weight) * 1.667);
+  font-family: var(--font-family);
+}
+
+h5 {
+  font-size: calc(var(--font-size) * 1.25);
+  letter-spacing: var(--letter-spacing);
+  font-weight: calc(var(--font-weight) * 1.5);
+  font-family: var(--font-family);
+}
+
+h6 {
+  font-size: calc(var(--font-size) * 0.8);
+  letter-spacing: var(--letter-spacing);
+  font-weight: calc(var(--font-weight) * 1);
+  font-family: var(--font-family);
+}
+
+body {
+  background-color: var(--color-primary);
+  min-height: 100vh;
+}/*# sourceMappingURL=style.css.map */

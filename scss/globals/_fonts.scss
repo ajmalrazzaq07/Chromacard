@@ -1,0 +1,52 @@
+@font-face {
+  font-family: Inter var;
+  src: url("/fonts/inter-roman-latin.2ed14f66.woff2") format("woff2");
+  font-style: normal;
+  font-weight: 100 900;
+  font-display: swap;
+  unicode-range: U+0-FF, U+131, U+152-153, U+2BB-2BC, U+2C6, U+2DA, U+2DC,
+    U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF,
+    U+FFFD;
+}
+@import url("https://fonts.googleapis.com/css2?family=Noto+Sans+Mono&family=Poppins&display=swap");
+@font-face {
+  font-family: "Rza";
+  src: url("https://www.upwork.com/static/fonts-global/4.0.1/rza-regular.woff2")
+    format("woff2");
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+}
+@font-face {
+  font-family: "Product Sans";
+  src: local("Open Sans"), local("OpenSans"),
+    url("https://fonts.gstatic.com/s/productsans/v5/HYvgU2fE2nRJvZ5JFAumwegdm0LZdjqr5-oayXSOefg.woff2")
+      format("woff2");
+  font-style: normal;
+}
+@font-face {
+  font-family: "Lemon Milk";
+  src: url("/fonts/LEMONMILK-Medium.woff2") format("woff2");
+  font-style: normal;
+  font-weight: 800;
+  font-display: swap;
+  unicode-range: U+0-FF, U+131, U+152-153, U+2BB-2BC, U+2C6, U+2DA, U+2DC,
+    U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF,
+    U+FFFD;
+}
+@font-face {
+  font-family: "DM Sans";
+  src: url("/fonts/DM_Sans-500-latin4.82c42c7.woff2") format("woff2");
+  font-style: normal;
+  font-weight: 500;
+  font-display: swap;
+  unicode-range: U+0-FF, U+131, U+152-153, U+2BB-2BC, U+2C6, U+2DA, U+2DC,
+    U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF,
+    U+FFFD;
+}
+$font-primary: "Rza";
+$font-secondary: Product Sans;
+$font-tertiary: "Poppins", sans-serif;
+$font-tetra: Inter var;
+$font-penta: "Lemon Milk";
+$font-hexa: "DM Sans";
