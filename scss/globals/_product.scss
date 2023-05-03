@@ -1,6 +1,6 @@
 @use "breakpoints" as *;
 @use "fonts" as *;
-.product_card {
+#product_card {
   background-color: var(--color-primary);
   width: 450px;
   //   height: 400px;
@@ -11,7 +11,7 @@
   justify-content: space-between;
   align-items: center;
 }
-.img_bg {
+#img_bg {
   width: 140px;
   height: 140px;
   border-radius: 1000px;
@@ -24,7 +24,7 @@
   top: 20px;
   left: -32px;
 }
-.product_info {
+#product_info {
   margin: 0;
 }
 #product_name {
@@ -47,14 +47,14 @@
   font-family: $font-hepta;
   color: var(--color-tetra);
 }
-.productbtns {
+#product_btns {
   display: flex;
   flex-direction: column;
   justify-content: space-around;
   gap: 10px;
   align-items: center;
 }
-#primary {
+#primarybtn {
   width: 80px;
   height: 30px;
   outline: none;
@@ -62,7 +62,7 @@
   border-radius: 1000px;
   font-family: $font-secondary;
 }
-#secondary {
+#secondarybtn {
   background: none;
   outline: none;
   border: none;
