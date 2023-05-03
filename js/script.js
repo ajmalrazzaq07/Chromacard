@@ -8,3 +8,4 @@ function backhome() {
   home.style.display = "";
   onboarding.style.display = "none";
 }
+scrollReveal().reveal(".header__wrapper__brand__logo", { delay: 500 });

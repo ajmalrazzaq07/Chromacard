@@ -63,7 +63,7 @@
             <p class="main__wrapper__intro__description">
               AI Based
               <br />
-              Random Color Business Card Generator
+              Random Color Product Card Generator
             </p>
             <button class="main__wrapper__intro__startbtn" onclick="launch()">
               Generate
@@ -123,42 +123,67 @@
       </div>
 
       <div id="onboarding" style="display: none">
-        <div class="onboardingwrapper">
-          <div class="onboardingwrapper__styleone">
-            <img class="imgcard" src="/images/Business card.svg" alt="" />
-            <div class="onboardingwrapper__styleone__dis">
-              <h6 class="onboardingwrapper__styleone__dis__txt">Style one</h6>
-              <button class="onboardingwrapper__styleone__dis__btn">
-                Choose
-              </button>
+        <div class="onboarding__wrapper">
+          <div class="onboarding__wrapper__container">
+            <div class="onboarding__wrapper__container__left">
+              <div class="container">
+                <div class="material-textfield">
+                  <input placeholder=" " type="text" />
+                  <label>Product Name</label>
+                </div>
+              </div>
+              <div class="container">
+                <div class="material-textfield">
+                  <input placeholder=" " type="text" />
+                  <label>Description</label>
+                </div>
+              </div>
+              <div class="container">
+                <div class="material-textfield">
+                  <input placeholder=" " type="text" />
+                  <label>Price</label>
+                </div>
+              </div>
+              <div class="container">
+                <div class="material-textfield">
+                  <input placeholder=" " type="text" />
+                  <label>Price</label>
+                </div>
+              </div>
+              <div class="container">
+                <div class="material-textfield">
+                  <input placeholder=" " type="text" />
+                  <label>Price</label>
+                </div>
+              </div>
+              <div class="container">
+                <div class="material-textfield">
+                  <input placeholder=" " type="text" />
+                  <label>Price</label>
+                </div>
+              </div>
             </div>
-          </div>
-          <div class="onboardingwrapper__styletwo">
-            <img
-              class="imgcard"
-              src="/images/Businesscardstyletwo.svg"
-              alt=""
-            />
-            <div class="onboardingwrapper__styletwo__dis">
-              <h6 class="onboardingwrapper__styleone__dis__txt">Style two</h6>
-              <button class="onboardingwrapper__styleone__dis__btn">
-                Choose
-              </button>
-            </div>
-          </div>
-          <div class="onboardingwrapper__stylethree">
-            <img
-              class="imgcard"
-              src="/images/businesscardstylethree.svg"
-              alt=""
-            />
-            <div class="onboardingwrapper__styleone__dis">
-              <h6 class="onboardingwrapper__stylethree__dis__txt">
-                Style three
-              </h6>
-              <button class="onboardingwrapper__styleone__dis__btn">
-                Choose
-              </button>
+            <div class="onboarding__wrapper__container__right">
+              <div class="product_container">
+                <div class="product_card">
+                  <div class="img_bg">
+                    <img
+                      src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/26438/shoe.png"
+                      alt=""
+                      id="productimg"
+                    />
+                  </div>
+                  <div class="product_info">
+                    <h4 id="product_name">Name</h4>
+                    <p id="product_description">Description</p>
+                    <p id="product_price">$23</p>
+                  </div>
+                  <div class="productbtns">
+                    <button id="primary">Buy Now</button>
+                    <button id="secondary">Details</button>
+                  </div>
+                </div>
+              </div>
             </div>
           </div>
         </div>

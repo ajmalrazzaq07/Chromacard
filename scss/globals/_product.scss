@@ -1,0 +1,69 @@
+@use "breakpoints" as *;
+@use "fonts" as *;
+.product_card {
+  background-color: var(--color-primary);
+  width: 450px;
+  //   height: 400px;
+  border-radius: 16px;
+  padding: 30px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+}
+.img_bg {
+  width: 140px;
+  height: 140px;
+  border-radius: 1000px;
+  background-color: var(--color-tertiary);
+}
+#productimg {
+  width: 12em;
+  transform: rotate(-30deg);
+  position: relative;
+  top: 20px;
+  left: -32px;
+}
+.product_info {
+  margin: 0;
+}
+#product_name {
+  font-size: 30px;
+  color: var(--color-penta);
+  font-family: $font-hepta;
+  font-weight: 500;
+}
+#product_description {
+  font-size: 16px;
+  font-family: $font-secondary;
+  color: var(--color-tetra);
+}
+#product_description__secondary {
+  font-size: 16px;
+  font-family: $font-secondary;
+  color: var(--color-tetra);
+}
+#product_price {
+  font-family: $font-hepta;
+  color: var(--color-tetra);
+}
+.productbtns {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  gap: 10px;
+  align-items: center;
+}
+#primary {
+  width: 80px;
+  height: 30px;
+  outline: none;
+  border: none;
+  border-radius: 1000px;
+  font-family: $font-secondary;
+}
+#secondary {
+  background: none;
+  outline: none;
+  border: none;
+}

@@ -20,7 +20,14 @@
 @font-face {
   font-family: "Product Sans";
   src: local("Open Sans"), local("OpenSans"),
-    url("https://fonts.gstatic.com/s/productsans/v5/HYvgU2fE2nRJvZ5JFAumwegdm0LZdjqr5-oayXSOefg.woff2")
+    url("https://fonts.gstatic.com/s/googlesans/v46/4UaRrENHsxJlGDuGo1OIlJfC6mGS6vhAK1YobMu2vgCIhM907w.woff2")
+      format("woff2");
+  font-style: normal;
+}
+@font-face {
+  font-family: "Product Sans Bold";
+  src: local("Open Sans"), local("OpenSans"),
+    url("https://fonts.gstatic.com/s/googlesans/v46/4Ua_rENHsxJlGDuGo1OIlJfC6l_24rlCK1Yo_Iqcsih3SAyH6cAwhX9RFD48TE63OOYKtrw2IKlh.woff")
       format("woff2");
   font-style: normal;
 }
@@ -50,3 +57,4 @@ $font-tertiary: "Poppins", sans-serif;
 $font-tetra: Inter var;
 $font-penta: "Lemon Milk";
 $font-hexa: "DM Sans";
+$font-hepta: Product Sans Bold;

@@ -5,6 +5,7 @@
   border-bottom: 1px solid var(--color-secondary);
   position: sticky;
   top: 0;
+  z-index: 999;
   &__wrapper {
     padding: 0px 20px;
     display: flex;
