@@ -128,25 +128,46 @@
             <div class="onboarding__wrapper__container__left">
               <div class="container">
                 <div class="material-textfield">
-                  <input placeholder=" " type="text" />
+                  <input
+                    placeholder=" "
+                    type="text"
+                    id="productnameinput"
+                    oninput="applyproductname()"
+                  />
                   <label>Product Name</label>
                 </div>
               </div>
               <div class="container">
                 <div class="material-textfield">
-                  <input placeholder=" " type="text" />
+                  <input
+                    placeholder=" "
+                    type="text"
+                    id="productdescriptioninput"
+                    oninput="applyproductdescription()"
+                  />
                   <label>Description</label>
                 </div>
               </div>
               <div class="container">
                 <div class="material-textfield">
-                  <input placeholder=" " type="text" />
+                  <input
+                    placeholder=" "
+                    type="text"
+                    id="productpriceinput"
+                    oninput="applyproductprice()"
+                  />
                   <label>Price</label>
                 </div>
               </div>
               <div class="container">
                 <div class="material-textfield">
-                  <input placeholder=" " type="text" />
+                  <input
+                    type="file"
+                    accept="image/*"
+                    name="image"
+                    id="file"
+                    onchange="loadFile(event)"
+                  />
                   <label>Price</label>
                 </div>
               </div>
@@ -178,7 +199,7 @@
                   <div id="product_info">
                     <h4 id="product_name">Name</h4>
                     <p id="product_description">Description</p>
-                    <p id="product_price">$23</p>
+                    <p id="product_price">$44</p>
                   </div>
                   <div id="product_btns">
                     <button id="primarybtn">Buy Now</button>

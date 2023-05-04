@@ -1,21 +1,28 @@
 @use "breakpoints" as *;
 @use "fonts" as *;
 #product_card {
-  background-color: var(--color-primary);
-  width: 450px;
-  //   height: 400px;
+  background-color: var(--color-tertiary);
+  width: calc(100% + 0.1em);
+  height: calc(170px + 1em);
   border-radius: 16px;
   padding: 30px;
   display: flex;
   flex-direction: row;
   justify-content: space-between;
   align-items: center;
+  flex-wrap: wrap;
+  gap: 30px;
+  @include breakpoint(900px) {
+    flex-direction: column;
+    min-width: 300px;
+    height: 500px;
+  }
 }
 #img_bg {
   width: 140px;
   height: 140px;
   border-radius: 1000px;
-  background-color: var(--color-tertiary);
+  background-color: var(--color-primary);
 }
 #productimg {
   width: 12em;
@@ -26,6 +33,7 @@
 }
 #product_info {
   margin: 0;
+  text-align: center;
 }
 #product_name {
   font-size: 30px;

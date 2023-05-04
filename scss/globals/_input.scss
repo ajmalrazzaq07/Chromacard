@@ -47,3 +47,6 @@ input:not(:placeholder-shown) + label {
   top: 0;
   transform: translateY(-50%) scale(0.9);
 }
+input[type="file"]::file-selector-button {
+  display: none;
+}
