@@ -329,7 +329,7 @@ h6 {
   flex-direction: column;
   gap: 12px;
   background-color: var(--color-tertiary);
-  padding: 40px;
+  padding: 30px;
   border-radius: 16px;
 }
 .onboarding__wrapper__container__right {
