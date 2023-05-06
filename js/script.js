@@ -1,3 +1,4 @@
+const Productcard = document.getElementById("product_card");
 const sections = {
   home: document.getElementById("home"),
   onboarding: document.getElementById("onboarding"),
@@ -20,41 +21,33 @@ const cardbtns = {
   primary: document.getElementById("primarybtn"),
   secondary: document.getElementById("secondarybtn"),
 };
-const inputs = {
-  productnameinput: document.getElementById("productnameinput"),
-  productdescriptioninput: document.getElementById("productdescriptioninput"),
-  productpriceinput: document.getElementById("productpriceinput"),
-};
+
 function launch() {
   sections.home.style.display = "none";
   sections.onboarding.style.display = "";
+  sections.onboarding.classList.add("loading_fade");
 }
 function backhome() {
   sections.home.style.display = "";
   sections.onboarding.style.display = "none";
 }
-function applyproductname() {
-  if (inputs.productnameinput.value) {
-    cardtext.name.textContent = inputs.productnameinput.value;
+
+function generate() {
+  const cardradius = Math.trunc(Math.random() * 70);
+  const imgbgradius = Math.trunc(Math.random() * 100);
+  const btnradius = Math.trunc(Math.random() * 100);
+  const checkdirectionbtns = Math.trunc(Math.random() * 4);
+  Productcard.style.borderRadius = cardradius + "px";
+  cardimage.bg.style.borderRadius = imgbgradius + "px";
+  cardbtns.primary.style.borderRadius = btnradius + "px";
+
+  if (checkdirectionbtns == 0) {
+    cardsections.btns.style.flexDirection = "column-reverse";
+  } else if (checkdirectionbtns == 1) {
+    cardsections.btns.style.flexDirection = "row";
+  } else if (checkdirectionbtns == 2) {
+    cardsections.btns.style.flexDirection = "row-reverse";
   } else {
-    cardtext.name.textContent = "Name";
+    cardsections.btns.style.flexDirection = "column";
   }
 }
-function applyproductdescription() {
-  if (inputs.productdescriptioninput.value) {
-    cardtext.description.textContent = inputs.productdescriptioninput.value;
-  } else {
-    cardtext.description.textContent = "Description";
-  }
-}
-function applyproductprice() {
-  if (inputs.productpriceinput.value) {
-    cardtext.price.textContent = inputs.productpriceinput.value;
-  } else {
-    cardtext.price.textContent = "$44";
-  }
-}
-var loadFile = function (event) {
-  var image = cardimage.img;
-  image.src = URL.createObjectURL(event.target.files[0]);
-};
