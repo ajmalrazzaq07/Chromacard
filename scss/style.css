@@ -431,6 +431,64 @@ h6 {
   color: var(--color-tetra);
 }
 
+#loading-message {
+  position: absolute;
+  -webkit-backdrop-filter: blur(5px);
+          backdrop-filter: blur(5px);
+  width: 100%;
+  height: 80px;
+  z-index: 999;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  transition: all 2s ease-in;
+}
+
+#error-message {
+  position: absolute;
+  -webkit-backdrop-filter: blur(5px);
+          backdrop-filter: blur(5px);
+  width: 100%;
+  height: 80px;
+  z-index: 999;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  transition: all 2s ease-in;
+}
+
+#copy-message {
+  position: absolute;
+  -webkit-backdrop-filter: blur(5px);
+          backdrop-filter: blur(5px);
+  width: 100%;
+  height: 80px;
+  z-index: 999;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  transition: all 2s ease-in;
+}
+
+.message {
+  font-family: Product Sans;
+}
+.message__error {
+  color: red;
+}
+.message__success {
+  color: green;
+}
+.message__load {
+  color: #858585;
+}
+
 .loading_fade {
   animation: fade-in 1s ease;
 }
