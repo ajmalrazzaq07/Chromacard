@@ -245,19 +245,21 @@ function copycode() {
   color: ${colorchecktext};
 }
 `;
-  const code = html + css;
+  const code = html + "\n\n<style>\n" + css + "\n</style>";
+
+  // Create a temporary textarea element to hold the code
+  const textarea = document.createElement("textarea");
+  textarea.value = code;
+  document.body.appendChild(textarea);
 
   // Copy the code to the clipboard
-  navigator.clipboard.writeText(code).then(
-    function () {
-      copyMessage.style.display = "";
-      setTimeout(() => {
-        copyMessage.style.display = "none";
-      }, 2000);
-    },
-    function () {
-      // Show an error message if the copy operation failed
-      alert("Failed to copy code to clipboard!");
-    }
-  );
+  textarea.select();
+  document.execCommand("copy");
+
+  // Remove the temporary textarea element
+  document.body.removeChild(textarea);
+  copyMessage.style.display = "";
+  setTimeout(() => {
+    copyMessage.style.display = "none";
+  }, 2000);
 }
