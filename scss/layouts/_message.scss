@@ -1,7 +1,6 @@
 @use "../globals/fonts" as *;
 #loading-message {
   position: absolute;
-  backdrop-filter: blur(5px);
   width: 100%;
   height: 80px;
   z-index: 999;
@@ -11,42 +10,23 @@
   justify-content: center;
   align-items: center;
   transition: all 2s ease-in;
+  background-color: var(--color-primary);
 }
 #error-message {
-  position: absolute;
-  backdrop-filter: blur(5px);
-  width: 100%;
-  height: 80px;
-  z-index: 999;
-  margin: 0 auto;
-  display: flex;
-  flex-direction: row;
-  justify-content: center;
-  align-items: center;
-  transition: all 2s ease-in;
+  @extend #loading-message;
 }
 #copy-message {
-  position: absolute;
-  backdrop-filter: blur(5px);
-  width: 100%;
-  height: 80px;
-  z-index: 999;
-  margin: 0 auto;
-  display: flex;
-  flex-direction: row;
-  justify-content: center;
-  align-items: center;
-  transition: all 2s ease-in;
+  @extend #loading-message;
 }
 .message {
   font-family: $font-secondary;
   &__error {
-    color: red;
+    color: var(--color-red);
   }
   &__success {
-    color: green;
+    color: var(--color-green);
   }
   &__load {
-    color: #858585;
+    color: var(--color-hexa);
   }
 }

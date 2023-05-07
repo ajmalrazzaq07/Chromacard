@@ -1,4 +1,8 @@
 const Productcard = document.getElementById("product_card");
+const footer = document.getElementById("footer");
+const loadingMessage = document.getElementById("loading-message");
+const errorMessage = document.getElementById("error-message");
+const copybtn = document.getElementById("copybtn");
 const sections = {
   home: document.getElementById("home"),
   onboarding: document.getElementById("onboarding"),
@@ -21,13 +25,20 @@ const cardbtns = {
   primary: document.getElementById("primarybtn"),
   secondary: document.getElementById("secondarybtn"),
 };
+if (sections.home.style.display == "") {
+  document.getElementById("backbtn").style.display = "none";
+}
 
 function launch() {
   sections.home.style.display = "none";
   sections.onboarding.style.display = "";
   sections.onboarding.classList.add("loading_fade");
+  document.getElementById("backbtn").style.display = "";
+  footer.style.display = "none";
 }
 function backhome() {
+  footer.style.display = "";
+  document.getElementById("backbtn").style.display = "none";
   sections.home.style.display = "";
   sections.onboarding.style.display = "none";
 }
@@ -76,8 +87,6 @@ function generate() {
     },
   };
 
-  const loadingMessage = document.getElementById("loading-message");
-  const errorMessage = document.getElementById("error-message");
   errorMessage.style.display = "none";
   loadingMessage.style.display = "";
 
@@ -91,7 +100,7 @@ function generate() {
     .then((data) => {
       loadingMessage.style.display = "none";
       console.log(data.results);
-
+      copybtn.style.display = "";
       let [array1] = [...data.results];
 
       let palette = array1.palette;
@@ -153,9 +162,11 @@ function generate() {
       }
     })
     .catch((error) => {
-      console.error("There was a problem with the fetch operation:", error);
       loadingMessage.style.display = "none";
       errorMessage.style.display = "";
+      setTimeout(() => {
+        errorMessage.style.display = "none";
+      }, 2000);
     });
 }
 function copycode() {
