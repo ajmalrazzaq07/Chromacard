@@ -1,4 +1,5 @@
 @import url("https://fonts.googleapis.com/css2?family=Noto+Sans+Mono&family=Poppins&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Roboto+Mono&display=swap");
 *,
 *:after,
 *:before {
@@ -148,8 +149,8 @@ h2 {
   font-family: Product Sans;
 }
 .main__wrapper__intro__author {
-  font-family: monospace;
-  color: var(--color-penta);
+  font-family: "Roboto Mono", monospace;
+  color: var(--color-hexa);
   font-size: 14px;
 }
 .main__wrapper__intro__startbtn {

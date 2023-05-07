@@ -9,6 +9,7 @@
     U+FFFD;
 }
 @import url("https://fonts.googleapis.com/css2?family=Noto+Sans+Mono&family=Poppins&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Roboto+Mono&display=swap");
 @font-face {
   font-family: "Rza";
   src: url("https://www.upwork.com/static/fonts-global/4.0.1/rza-regular.woff2")
@@ -58,3 +59,4 @@ $font-tetra: Inter var;
 $font-penta: "Lemon Milk";
 $font-hexa: "DM Sans";
 $font-hepta: Product Sans Bold;
+$font-octa: "Roboto Mono", monospace;

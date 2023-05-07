@@ -30,8 +30,8 @@
         font-family: $font-secondary;
       }
       &__author {
-        font-family: monospace;
-        color: var(--color-penta);
+        font-family: $font-octa;
+        color: var(--color-hexa);
         font-size: 14px;
       }
       &__startbtn {
