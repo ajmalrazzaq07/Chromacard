@@ -55,130 +55,6 @@
     </div>
   </header>
   <body>
-    <div id="loading-message" style="display: none">
-      <svg
-        viewBox="0 0 24 24"
-        xmlns="http://www.w3.org/2000/svg"
-        width="34"
-        height="34"
-        fill="none"
-      >
-        <style>
-          @keyframes splash {
-            0% {
-              transform: scale(0.2);
-              opacity: 0.8;
-            }
-            80% {
-              transform: scale(1.2);
-              opacity: 0;
-            }
-            to {
-              transform: scale(2.2);
-              opacity: 0;
-            }
-          }
-        </style>
-        <path
-          fill="#d4d4d4"
-          d="M13.295 10.769l2.552-5.787-7.979 7.28 3.254.225-3.353 6.362 8.485-7.388-2.959-.692z"
-          style="
-            animation: splash 1.5s cubic-bezier(0.165, 0.84, 0.44, 1) infinite
-              both;
-            transform-origin: center center;
-          "
-        />
-      </svg>
-
-      <span class="message message__load">AI is Mixing colors</span>
-    </div>
-    <div id="error-message" style="display: none">
-      <svg
-        viewBox="0 0 24 24"
-        xmlns="http://www.w3.org/2000/svg"
-        width="34"
-        height="34"
-        fill="none"
-      >
-        <style>
-          @keyframes n-info-hex {
-            0%,
-            to {
-              transform: rotate(0deg);
-              transform-origin: center;
-            }
-            10%,
-            90% {
-              transform: rotate(2deg);
-            }
-            20%,
-            40%,
-            60% {
-              transform: rotate(-6deg);
-            }
-            30%,
-            50%,
-            70% {
-              transform: rotate(6deg);
-            }
-            80% {
-              transform: rotate(-2deg);
-            }
-          }
-          .prefix__n-info-hex {
-            animation: n-info-hex 0.8s cubic-bezier(0.455, 0.03, 0.515, 0.955)
-              both infinite;
-          }
-        </style>
-        <g class="prefix__n-info-hex">
-          <path
-            stroke="#d4d4d4"
-            stroke-linecap="round"
-            stroke-width="1.5"
-            d="M12 8.143v4.55"
-          />
-          <circle cx="12" cy="14.957" r=".9" fill="#858585" />
-        </g>
-        <path
-          class="prefix__n-info-hex"
-          style="animation-delay: 1s"
-          stroke="#858585"
-          stroke-width="1.5"
-          d="M19.994 14.753a1 1 0 01-.282.712l-4.007 4.134a1 1 0 01-.702.304l-5.756.09a1 1 0 01-.712-.281l-4.134-4.007a1 1 0 01-.304-.702l-.09-5.756a1 1 0 01.281-.712l4.007-4.134a1 1 0 01.702-.304l5.756-.09a1 1 0 01.712.281l4.134 4.007a1 1 0 01.304.702l.09 5.756z"
-        />
-      </svg>
-      <span class="message message__error">Failed to generate</span>
-    </div>
-    <div id="copy-message" style="display: none">
-      <svg
-        viewBox="0 0 24 24"
-        xmlns="http://www.w3.org/2000/svg"
-        width="34"
-        height="34"
-        fill="none"
-      >
-        <style>
-          @keyframes check {
-            to {
-              stroke-dashoffset: 0;
-            }
-          }
-        </style>
-        <circle cx="12" cy="12" r="8" stroke="#858585" stroke-width="1.5" />
-        <path
-          stroke="#858585"
-          stroke-linecap="round"
-          stroke-width="1.5"
-          d="M9.215 12.052l1.822 1.805 3.748-3.714"
-          style="
-            animation: check 2s infinite cubic-bezier(0.99, -0.1, 0.01, 1.02);
-          "
-          stroke-dashoffset="100"
-          stroke-dasharray="100"
-        />
-      </svg>
-      <span class="message message__success">Copied Successfully</span>
-    </div>
     <main class="main">
       <div id="home">
         <div class="main__wrapper">
@@ -271,6 +147,138 @@
                 </div>
               </div>
             </div>
+          </div>
+
+          <div id="loading-message" style="display: none">
+            <svg
+              viewBox="0 0 24 24"
+              xmlns="http://www.w3.org/2000/svg"
+              width="34"
+              height="34"
+              fill="none"
+            >
+              <style>
+                @keyframes splash {
+                  0% {
+                    transform: scale(0.2);
+                    opacity: 0.8;
+                  }
+                  80% {
+                    transform: scale(1.2);
+                    opacity: 0;
+                  }
+                  to {
+                    transform: scale(2.2);
+                    opacity: 0;
+                  }
+                }
+              </style>
+              <path
+                fill="#d4d4d4"
+                d="M13.295 10.769l2.552-5.787-7.979 7.28 3.254.225-3.353 6.362 8.485-7.388-2.959-.692z"
+                style="
+                  animation: splash 1.5s cubic-bezier(0.165, 0.84, 0.44, 1)
+                    infinite both;
+                  transform-origin: center center;
+                "
+              />
+            </svg>
+
+            <span class="message message__load">AI is Mixing colors</span>
+          </div>
+          <div id="error-message" style="display: none">
+            <svg
+              viewBox="0 0 24 24"
+              xmlns="http://www.w3.org/2000/svg"
+              width="24"
+              height="24"
+              fill="none"
+            >
+              <style>
+                @keyframes n-info-hex {
+                  0%,
+                  to {
+                    transform: rotate(0deg);
+                    transform-origin: center;
+                  }
+                  10%,
+                  90% {
+                    transform: rotate(2deg);
+                  }
+                  20%,
+                  40%,
+                  60% {
+                    transform: rotate(-6deg);
+                  }
+                  30%,
+                  50%,
+                  70% {
+                    transform: rotate(6deg);
+                  }
+                  80% {
+                    transform: rotate(-2deg);
+                  }
+                }
+                .prefix__n-info-hex {
+                  animation: n-info-hex 0.8s
+                    cubic-bezier(0.455, 0.03, 0.515, 0.955) both infinite;
+                }
+              </style>
+              <g class="prefix__n-info-hex">
+                <path
+                  stroke="#d4d4d4"
+                  stroke-linecap="round"
+                  stroke-width="1.5"
+                  d="M12 8.143v4.55"
+                />
+                <circle cx="12" cy="14.957" r=".9" fill="#858585" />
+              </g>
+              <path
+                class="prefix__n-info-hex"
+                style="animation-delay: 1s"
+                stroke="#858585"
+                stroke-width="1.5"
+                d="M19.994 14.753a1 1 0 01-.282.712l-4.007 4.134a1 1 0 01-.702.304l-5.756.09a1 1 0 01-.712-.281l-4.134-4.007a1 1 0 01-.304-.702l-.09-5.756a1 1 0 01.281-.712l4.007-4.134a1 1 0 01.702-.304l5.756-.09a1 1 0 01.712.281l4.134 4.007a1 1 0 01.304.702l.09 5.756z"
+              />
+            </svg>
+            <span class="message message__error">Failed to generate</span>
+          </div>
+          <div id="copy-message" style="display: none">
+            <svg
+              viewBox="0 0 24 24"
+              xmlns="http://www.w3.org/2000/svg"
+              width="24"
+              height="24"
+              fill="none"
+            >
+              <style>
+                @keyframes check {
+                  to {
+                    stroke-dashoffset: 0;
+                  }
+                }
+              </style>
+              <circle
+                cx="12"
+                cy="12"
+                r="8"
+                stroke="#858585"
+                stroke-width="1.5"
+              />
+              <path
+                stroke="#858585"
+                stroke-linecap="round"
+                stroke-width="1.5"
+                d="M9.215 12.052l1.822 1.805 3.748-3.714"
+                style="
+                  animation: check 2s infinite
+                    cubic-bezier(0.99, -0.1, 0.01, 1.02);
+                "
+                stroke-dashoffset="100"
+                stroke-dasharray="100"
+              />
+            </svg>
+            <span class="message message__success">Copied Successfully</span>
           </div>
           <div class="onboarding__wrapper__btns">
             <button
