@@ -29,6 +29,11 @@
 
         font-family: $font-secondary;
       }
+      &__author {
+        font-family: monospace;
+        color: var(--color-penta);
+        font-size: 14px;
+      }
       &__startbtn {
         display: flex;
         align-items: center;
