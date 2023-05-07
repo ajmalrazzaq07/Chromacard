@@ -8,14 +8,14 @@
   align-items: center;
 }
 #product_card {
+  width: 600px;
   background-color: var(--color-tertiary);
   border-radius: 16px;
-  padding: 20px 40px;
   display: flex;
+  padding: 20px 30px;
   flex-direction: row;
-  justify-content: center;
+  justify-content: space-between;
   align-items: center;
-  flex-wrap: wrap;
   gap: 30px;
 }
 #img_bg {
@@ -25,11 +25,11 @@
   background-color: var(--color-primary);
 }
 #productimg {
-  width: 12em;
+  width: 13em;
   transform: rotate(-30deg);
   position: relative;
-  top: 20px;
-  left: -32px;
+  top: 15px;
+  left: -40px;
 }
 #product_info {
   margin: 0;

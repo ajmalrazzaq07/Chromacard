@@ -1,60 +1,59 @@
-@use "breakpoints" as *;
 @use "../globals/fonts" as *;
-%hover {
-  background: var(--color-hexa);
-  transition: all 0.5s ease;
-  color: var(--color-tertiary);
-}
-%flexcolumn {
+.onboarding {
   display: flex;
-  flex-direction: column;
-  align-items: center;
   justify-content: center;
-}
-%flexrow {
-  display: flex;
-  flex-direction: column;
   align-items: center;
-  justify-content: center;
-}
-.onboarding__wrapper {
-  margin: 10px;
-  @extend %flexcolumn;
-  gap: 40px;
+  width: 100%;
   &__container {
-    width: 100%;
-    border-radius: 16px;
-    @extend %flexrow;
-    justify-content: space-around;
-    padding: 40px;
-    height: 60vh;
-  }
-  &__btns {
+    height: 70vh;
+    padding: 20px;
+    border: 2px solid var(--color-secondary);
     display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
     gap: 20px;
-    &__primary {
-      @extend %flexrow;
-      background: var(--color-penta);
-      outline: none;
-      width: 130px;
-      height: 40px;
-      padding: 10px;
-      border: none;
-      color: var(--color-tetra);
-      font-family: $font-secondary;
-      border-radius: 100px;
-      margin-top: 20px;
-      font-size: 15px;
-      opacity: 0.7;
-    }
-    &__primary:hover {
-      @extend %hover;
-    }
-    &__secondary {
-      @extend .onboarding__wrapper__btns__primary;
-    }
-    &__secondary:hover {
-      @extend %hover;
+    width: 350px;
+    border-radius: 1rem;
+    &__input_row {
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+      gap: 20px;
+      justify-content: center;
     }
   }
+}
+input[type="text"] {
+  background: none;
+  border: 1.5px solid var(--color-secondary);
+  border-radius: 0.6rem;
+  height: 48px;
+  width: 220px;
+  color: var(--color-hexa);
+  font-family: $font-secondary;
+  padding: 0px 10px;
+  &:focus {
+    border: 1px solid var(--color-hexa);
+    outline: none;
+    color: var(--color-hexa);
+
+    font-family: $font-secondary;
+    padding: 0px 10px;
+  }
+}
+
+.next {
+  background: var(--color-penta);
+  outline: none;
+  width: 130px;
+  height: 40px;
+  padding: 10px;
+  border: none;
+  color: var(--color-tetra);
+  font-family: $font-secondary;
+  border-radius: 100px;
+  margin-top: 20px;
+  font-size: 15px;
+  opacity: 0.7;
 }

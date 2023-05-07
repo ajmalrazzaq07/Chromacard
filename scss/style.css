@@ -18,7 +18,7 @@ body {
   --line-height: calc(var(--font-size) * 1.4);
   --letter-spacing: calc(var(--font-size) * 0.0015);
   --color-primary: #1e1e20;
-  --color-secondary: #252529;
+  --color-secondary: rgba(63, 63, 70, 0.4);
   --color-tertiary: #161618;
   --color-tetra: #dfdfd7;
   --color-penta: #4d4d4d;
@@ -97,7 +97,13 @@ h2 {
 }
 .header__wrapper {
   display: flex;
+  padding: 0px 20px;
   justify-content: space-between;
+}
+@media (max-width: 900px) {
+  .header__wrapper {
+    padding: 0px;
+  }
 }
 .header__wrapper__brand {
   display: flex;
@@ -112,10 +118,6 @@ h2 {
   font-family: Product Sans;
   font-weight: 400;
   font-size: 1.5em;
-}
-
-#home {
-  padding: 0px;
 }
 
 .main {
@@ -186,42 +188,101 @@ h2 {
   position: relative;
 }
 
-.onboarding__wrapper__btns__primary:hover, .onboarding__wrapper__btns__secondary:hover {
+.onboarding {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+}
+.onboarding__container {
+  height: 70vh;
+  padding: 20px;
+  border: 2px solid var(--color-secondary);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 20px;
+  width: 350px;
+  border-radius: 1rem;
+}
+.onboarding__container__input_row {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 20px;
+  justify-content: center;
+}
+
+input[type=text] {
+  background: none;
+  border: 1.5px solid var(--color-secondary);
+  border-radius: 0.6rem;
+  height: 48px;
+  width: 220px;
+  color: var(--color-hexa);
+  font-family: Product Sans;
+  padding: 0px 10px;
+}
+input[type=text]:focus {
+  border: 1px solid var(--color-hexa);
+  outline: none;
+  color: var(--color-hexa);
+  font-family: Product Sans;
+  padding: 0px 10px;
+}
+
+.next {
+  background: var(--color-penta);
+  outline: none;
+  width: 130px;
+  height: 40px;
+  padding: 10px;
+  border: none;
+  color: var(--color-tetra);
+  font-family: Product Sans;
+  border-radius: 100px;
+  margin-top: 20px;
+  font-size: 15px;
+  opacity: 0.7;
+}
+
+.generate__wrapper__btns__primary:hover, .generate__wrapper__btns__secondary:hover {
   background: var(--color-hexa);
   transition: all 0.5s ease;
   color: var(--color-tertiary);
 }
 
-.onboarding__wrapper {
+.generate__wrapper {
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
 }
 
-.onboarding__wrapper__btns__primary, .onboarding__wrapper__btns__secondary, .onboarding__wrapper__container {
+.generate__wrapper__btns__primary, .generate__wrapper__btns__secondary, .generate__wrapper__container {
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
 }
 
-.onboarding__wrapper {
+.generate__wrapper {
   margin: 10px;
   gap: 40px;
 }
-.onboarding__wrapper__container {
+.generate__wrapper__container {
   width: 100%;
   border-radius: 16px;
   justify-content: space-around;
   padding: 40px;
   height: 60vh;
 }
-.onboarding__wrapper__btns {
+.generate__wrapper__btns {
   display: flex;
   gap: 20px;
 }
-.onboarding__wrapper__btns__primary, .onboarding__wrapper__btns__secondary {
+.generate__wrapper__btns__primary, .generate__wrapper__btns__secondary {
   background: var(--color-penta);
   outline: none;
   width: 130px;
@@ -244,14 +305,14 @@ h2 {
 }
 
 #product_card {
+  width: 600px;
   background-color: var(--color-tertiary);
   border-radius: 16px;
-  padding: 20px 40px;
   display: flex;
+  padding: 20px 30px;
   flex-direction: row;
-  justify-content: center;
+  justify-content: space-between;
   align-items: center;
-  flex-wrap: wrap;
   gap: 30px;
 }
 
@@ -263,11 +324,11 @@ h2 {
 }
 
 #productimg {
-  width: 12em;
+  width: 13em;
   transform: rotate(-30deg);
   position: relative;
-  top: 20px;
-  left: -32px;
+  top: 15px;
+  left: -40px;
 }
 
 #product_info {
@@ -325,16 +386,16 @@ h2 {
 
 #loading-message, #copy-message, #error-message {
   position: absolute;
-  width: 100%;
-  height: 80px;
+  left: 50%;
+  transform: translateX(-50%);
   z-index: 999;
   bottom: 130px;
-  left: -16px;
   display: flex;
-  flex-direction: row;
+  flex-direction: column;
   justify-content: center;
   align-items: center;
   transition: all 2s ease-in;
+  background-color: var(--color-primary);
 }
 
 .message {

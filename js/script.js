@@ -1,10 +1,16 @@
 const Productcard = document.getElementById("product_card");
 const loadingMessage = document.getElementById("loading-message");
 const errorMessage = document.getElementById("error-message");
+const productnameinput = document.getElementById("productnameinput");
+const productdescriptioninput = document.getElementById(
+  "productdiscriptioninput"
+);
+const productpriceinput = document.getElementById("productpriceinput");
 const copybtn = document.getElementById("copybtn");
 const sections = {
   home: document.getElementById("home"),
   onboarding: document.getElementById("onboarding"),
+  generatesection: document.getElementById("generate__section"),
 };
 const cardsections = {
   image: document.getElementById("product_image"),
@@ -34,12 +40,33 @@ function launch() {
   sections.onboarding.classList.add("loading_fade");
   document.getElementById("backbtn").style.display = "";
 }
+
+function next() {
+  if (
+    productdescriptioninput.value != "" &&
+    productnameinput.value != "" &&
+    productpriceinput.value != ""
+  ) {
+    sections.generatesection.style.display = "";
+    sections.onboarding.style.display = "none";
+    cardtext.name.textContent = productnameinput.value;
+    cardtext.description.textContent = productdescriptioninput.value;
+    cardtext.price.textContent = productpriceinput.value;
+  } else {
+    alert("fill the fields");
+  }
+}
 // functon to get back on home section
 function backhome() {
-  document.getElementById("backbtn").style.display = "none";
-  sections.home.style.display = "";
-  sections.home.classList.add("loading_fade");
-  sections.onboarding.style.display = "none";
+  if (sections.generatesection.style.display == "") {
+    sections.generatesection.style.display = "none";
+    sections.onboarding.style.display = "";
+    sections.onboarding.classList.add("loading_fade");
+  } else if (sections.onboarding.style.display == "") {
+    sections.onboarding.style.display = "none";
+    sections.home.style.display = "";
+    sections.home.classList.add("loading_fade");
+  }
 }
 let btnflexdirection;
 let colorchecktext;

@@ -148,9 +148,38 @@
         </div>
       </div>
       <!-- generate section  -->
-      <div id="onboarding" style="display: none">
-        <div class="onboarding__wrapper">
-          <div class="onboarding__wrapper__container">
+      <div id="onboarding" style="display: none" class="onboarding">
+        <div class="onboarding__container">
+          <div class="onboarding__container__input_row">
+            <input
+              type="text"
+              name="productnameinput"
+              id="productnameinput"
+              placeholder="Product Name"
+            />
+            <input
+              type="text"
+              name="productdescriptioninput"
+              id="productdiscriptioninput"
+              placeholder="Product Description"
+            />
+          </div>
+          <div class="onboarding__container__input_row">
+            <input
+              type="text"
+              name="productpriceinput"
+              id="productpriceinput"
+              placeholder="Product Price"
+            />
+          </div>
+          <div class="onboarding__container__input_row">
+            <button class="next" onclick="next()">NEXT</button>
+          </div>
+        </div>
+      </div>
+      <div id="generate__section" style="display: none">
+        <div class="generate__wrapper">
+          <div class="generate__wrapper__container">
             <div class="product_container">
               <div id="product_card">
                 <div id="product_image">
@@ -313,15 +342,15 @@
             </svg>
             <span class="message message__success">Copied Successfully 😚</span>
           </div>
-          <div class="onboarding__wrapper__btns">
+          <div class="generate__wrapper__btns">
             <button
-              class="onboarding__wrapper__btns__primary"
+              class="generate__wrapper__btns__primary"
               onclick="generate()"
             >
               Generate
             </button>
             <button
-              class="onboarding__wrapper__btns__secondary"
+              class="generate__wrapper__btns__secondary"
               onclick="copycode()"
               style="display: none"
               id="copybtn"
