@@ -38,6 +38,7 @@ function launch() {
 function backhome() {
   document.getElementById("backbtn").style.display = "none";
   sections.home.style.display = "";
+  sections.home.classList.add("loading_fade");
   sections.onboarding.style.display = "none";
 }
 let btnflexdirection;
