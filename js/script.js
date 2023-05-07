@@ -27,13 +27,14 @@ const cardbtns = {
 if (sections.home.style.display == "") {
   document.getElementById("backbtn").style.display = "none";
 }
-
+//  function to show section 2
 function launch() {
   sections.home.style.display = "none";
   sections.onboarding.style.display = "";
   sections.onboarding.classList.add("loading_fade");
   document.getElementById("backbtn").style.display = "";
 }
+// functon to get back on home section
 function backhome() {
   document.getElementById("backbtn").style.display = "none";
   sections.home.style.display = "";
@@ -49,7 +50,9 @@ let color1;
 let color2;
 let color3;
 let btncheckcolor;
+// function to generate card
 function generate() {
+  // deafult data for psoting to api
   const json_data = {
     mode: "diffusion",
     num_colors: 4,
@@ -102,6 +105,7 @@ function generate() {
 
       let palette = array1.palette;
       let [colorprimary, colorsecondary] = [...palette];
+      // function to check color weather its bright or dark
       function isColorBright(hexColor) {
         const r = parseInt(hexColor.slice(1, 3), 16);
         const g = parseInt(hexColor.slice(3, 5), 16);
@@ -111,6 +115,7 @@ function generate() {
 
         return brightness >= 128;
       }
+      // based on brightness set text color or btn text to black or white
       if (isColorBright(colorprimary)) {
         colorchecktext = "black";
         cardtext.description.style.color = colorchecktext;
@@ -136,6 +141,8 @@ function generate() {
       cardtext.name.style.color = colorsecondary;
       color1 = colorprimary;
       color2 = colorsecondary;
+
+      // generating random things for card
       cardradius = Math.trunc(Math.random() * 70);
       imgbgradius = Math.trunc(Math.random() * 100);
       btnradius = Math.trunc(Math.random() * 100);
@@ -158,6 +165,7 @@ function generate() {
         cardsections.btns.style.flexDirection = btnflexdirection;
       }
     })
+    // checking error in api and showing notification
     .catch((error) => {
       loadingMessage.style.display = "none";
       errorMessage.style.display = "";
@@ -166,6 +174,7 @@ function generate() {
       }, 2000);
     });
 }
+// function to copy generated code
 function copycode() {
   const copyMessage = document.getElementById("copy-message");
   const html = `    <div id="product_card">
