@@ -1,5 +1,4 @@
 const Productcard = document.getElementById("product_card");
-const footer = document.getElementById("footer");
 const loadingMessage = document.getElementById("loading-message");
 const errorMessage = document.getElementById("error-message");
 const copybtn = document.getElementById("copybtn");
@@ -34,10 +33,8 @@ function launch() {
   sections.onboarding.style.display = "";
   sections.onboarding.classList.add("loading_fade");
   document.getElementById("backbtn").style.display = "";
-  footer.style.display = "none";
 }
 function backhome() {
-  footer.style.display = "";
   document.getElementById("backbtn").style.display = "none";
   sections.home.style.display = "";
   sections.onboarding.style.display = "none";
