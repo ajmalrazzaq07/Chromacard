@@ -1,5 +1,8 @@
 @use "../globals/fonts" as *;
 @use "breakpoints" as *;
+#home {
+  padding: 20px;
+}
 .main {
   padding: 15px;
   flex-direction: column;
