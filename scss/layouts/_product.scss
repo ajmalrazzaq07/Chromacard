@@ -17,6 +17,11 @@
   justify-content: space-between;
   align-items: center;
   gap: 30px;
+  @include breakpoint(900px) {
+    flex-direction: column;
+    width: 280px;
+    padding: 30px 20px;
+  }
 }
 #img_bg {
   width: 140px;

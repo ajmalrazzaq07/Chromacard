@@ -315,6 +315,13 @@ input[type=text]:focus {
   align-items: center;
   gap: 30px;
 }
+@media (max-width: 900px) {
+  #product_card {
+    flex-direction: column;
+    width: 280px;
+    padding: 30px 20px;
+  }
+}
 
 #img_bg {
   width: 140px;
