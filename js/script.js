@@ -127,7 +127,6 @@ function generate() {
     })
     .then((data) => {
       loadingMessage.style.display = "none";
-      console.log(data.results);
       copybtn.style.display = "";
       let [array1] = [...data.results];
 
