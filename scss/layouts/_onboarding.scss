@@ -56,4 +56,9 @@ input[type="text"] {
   margin-top: 20px;
   font-size: 15px;
   opacity: 0.7;
+  &:hover {
+    background: var(--color-hexa);
+    transition: all 0.5s ease;
+    color: var(--color-tertiary);
+  }
 }
