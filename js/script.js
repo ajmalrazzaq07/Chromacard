@@ -55,6 +55,7 @@ function next() {
   } else {
     alert("fill the fields");
   }
+  sections.generatesection.classList.add("loading_fade");
 }
 // functon to get back on home section
 function backhome() {
