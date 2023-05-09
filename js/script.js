@@ -172,12 +172,10 @@ function generate() {
 
       // generating random things for card
       cardradius = Math.trunc(Math.random() * 70);
-      imgbgradius = Math.trunc(Math.random() * 100);
-      btnradius = Math.trunc(Math.random() * 100);
       checkdirectionbtns = Math.trunc(Math.random() * 4);
       Productcard.style.borderRadius = cardradius + "px";
-      cardimage.bg.style.borderRadius = imgbgradius + "px";
-      cardbtns.primary.style.borderRadius = btnradius + "px";
+      cardimage.bg.style.borderRadius = cardradius + "px";
+      cardbtns.primary.style.borderRadius = cardradius + "px";
 
       if (checkdirectionbtns == 0) {
         btnflexdirection = "column-reverse";
